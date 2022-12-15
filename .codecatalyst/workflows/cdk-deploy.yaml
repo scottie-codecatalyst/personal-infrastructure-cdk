@@ -1,0 +1,27 @@
+Name: Workflow_631c
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: Push
+    Branches:
+      - main
+
+# Required - Define action configurations.
+Actions:
+  AWSCDKdeploy_79:
+    Identifier: aws/cdk-deploy@v1
+    Configuration:
+      Region: us-east-1
+      StackName: ProductionPersonalInfrastructure
+    Compute:
+      Type: EC2
+      Fleet: Linux.x86-64.Large
+    Environment:
+      Connections:
+        - Role: CodeCatalystPreviewDevelopmentAdministrator-45dkz1
+          Name: "452841502693"
+      Name: Production
+    Inputs:
+      Sources:
+        - WorkflowSource

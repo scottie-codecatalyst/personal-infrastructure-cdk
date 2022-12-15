@@ -1,1 +1,5 @@
-# scottie-personal-infrastructure
+## Personal Infrastructure
+```shell
+npm i
+cdk deploy
+```

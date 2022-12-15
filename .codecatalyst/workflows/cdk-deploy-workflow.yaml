@@ -11,6 +11,10 @@ Triggers:
 Actions:
   AWSCDKdeploy_54:
     Identifier: aws/cdk-deploy@v1
+    Configuration:
+      CdkRootPath: PersonalInfrastructure
+      Region: us-east-1
+      StackName: PersonalInfrastructureStack
     Compute:
       Type: EC2
       Fleet: Linux.x86-64.Large
@@ -22,7 +26,3 @@ Actions:
     Inputs:
       Sources:
         - WorkflowSource
-    Configuration:
-      CdkRootPath: PersonalInfrastructure
-      Region: us-east-1
-      StackName: ProductionPersonalInfrastructure

@@ -1,4 +1,4 @@
-Name: Workflow_67d4
+Name: cdk-deployment-workflow
 SchemaVersion: "1.0"
 
 # Optional - Set automatic triggers.
